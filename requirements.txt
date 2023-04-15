@@ -1,0 +1,6 @@
+pyopenssl~=20.0.1
+requests~=2.28.2
+cryptography~=40.0.1
+PyYAML~=6.0
+pywin32~=306
+pytelegrambotapi~=4.10.0

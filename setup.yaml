@@ -1,0 +1,32 @@
+#Включение/Выключение модулей
+MODULES:
+  WEB_CRL: yes
+  FIR_CRL: no
+
+#Проверка CRL на сайте
+# url: ссылка на crl
+# cheks: количество проверок (шт. в сутки) (24)
+# period start: начинающихся с (время в формате "HH:MM:SS")
+# run every: запускающихся каждый (время в формате "HH:MM:SS")
+# expires timing: "01:00:00" (время в формате "HH:MM:SS")
+WEB CRL:
+- path : http://www.sberbank.ru/ca/cpca2022k.crl
+  checks: 24
+  period start: "00:00:00"
+  run every: "01:00:00"
+  expires timing: "01:00:00"
+- path: http://www.sberbank.ru/ca/BUC2020k.crl
+  checks: 24
+  period start: "00:00:00"
+  run every: "01:00:00"
+  expires timing: "01:00:00"
+- path: http://www.sberbank.ru/ca/BUC2019k.crl
+  checks: 24
+  period start: "00:00:00"
+  run every: "01:00:00"
+  expires timing: "01:00:00"
+- path: http://www.sberbank.ru/ca/BUC2018k.crl
+  checks: 24
+  period start: "00:00:00"
+  run every: "01:00:00"
+  expires timing: "01:00:00"
