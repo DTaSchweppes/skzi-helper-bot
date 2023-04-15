@@ -2,7 +2,7 @@ CRL_MESSAGE = ""
 
 ABOUT_BOT_MESSAGE = "Данный бот актуальности СОС/БОК и международных сертификатов"
 
-TOKEN= "6159476169:AAHF_bEHQ9mqsUSfzcceWAyUBpKQYzgD6CI"
+TOKEN= ""
 
 STATUS_TEXTS = {
     "valid" : 'Действителен!',

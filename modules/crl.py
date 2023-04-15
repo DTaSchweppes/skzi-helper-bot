@@ -32,6 +32,9 @@ class CRLBaseChecker(base.Checker):
         checker1.from_yaml_to_crl_memory(yam)  # передали словарь в чекер, чтоб он с ним уже работал
         for x in checker1.CRL_MEMORY:
             last_update, next_update, timedelta = self.get_data(x)
-            msg += f"URL CRL {x} Последнее обновление {last_update} \n Следующее обновление {next_update} \n Оставшееся время действия {timedelta}\n\n"
+            msg += f"URL CRL {x} Последнее обновление {last_update.strftime('%d.%m.%y %H:%M:%S')} " \
+                   f"\n Следующее обновление {next_update.strftime('%d.%m.%y %H:%M:%S')} " \
+                   f"\n Оставшееся время действия {str(timedelta).split('.')[0]}" \
+                   f"\n ---------------------------------------\n"
         checker1.CRL_MEMORY.clear()
         return msg
